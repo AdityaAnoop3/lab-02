@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button deleteCityButton;
     int selectedPosition = -1;
 
-    @Override
+    @Override // override with required implementation of onCreate()
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
+            @Override // to show confirmation that we have selected a city from cityList
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectedPosition = position;
                 Toast.makeText(MainActivity.this, "Selected City: " + dataList.get(position), Toast.LENGTH_SHORT).show();
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         addCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showAddCityDialog();
+                showAddCityDialog(); // generates dialogue from our input and adds the city to cityList
             }
         });
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         deleteCityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteSelectedCity();
+                deleteSelectedCity(); // deletes the city currently selected on click of delete button
             }
         });
     }
