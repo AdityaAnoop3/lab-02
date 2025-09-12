@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectedPosition = position;
-                Toast.makeText(MainActivity.this, "Selected: " + dataList.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Selected City: " + dataList.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
